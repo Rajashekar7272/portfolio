@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, ExternalLink, ShoppingBag, Film, Gamepad2 } from 'lucide-react';
@@ -10,7 +9,7 @@ const projects = [
     icon: ShoppingBag,
     live: "https://men-wear.vercel.app/",
     github: "https://github.com/Rajashekar7272/Men-Wear-Ecommerce",
-    tech: ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    tech: ["Next.js", "React", "Tailwind CSS"],
     color: "from-blue-600 to-cyan-500"
   },
   {
