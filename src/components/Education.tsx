@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Calendar, Award, Cpu, ChevronDown, Book, Trophy } from 'lucide-react';
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  Award,
+  Book,
+  Calendar,
+  ChevronDown,
+  Cpu,
+  GraduationCap,
+  Trophy,
+} from "lucide-react";
+import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Education = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,7 +21,7 @@ const Education = () => {
   const achievements = [
     { icon: Trophy, text: "Dean's List - All Semesters" },
     { icon: Book, text: "Published Research Paper on ML Applications" },
-    { icon: Award, text: "Best Project Award - Final Year" }
+    { icon: Award, text: "Best Project Award - Final Year" },
   ];
 
   const containerVariants = {
@@ -22,38 +30,38 @@ const Education = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const cardVariants = {
-    hidden: { 
+    hidden: {
       y: 50,
       opacity: 0,
-      rotateX: 45
+      rotateX: 45,
     },
-    visible: { 
+    visible: {
       y: 0,
       opacity: 1,
       rotateX: 0,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 12
-      }
-    }
+        damping: 12,
+      },
+    },
   };
 
   const timelineVariants = {
     hidden: { scaleY: 0 },
-    visible: { 
+    visible: {
       scaleY: 1,
       transition: {
         duration: 1,
-        ease: "circOut"
-      }
-    }
+        ease: "circOut",
+      },
+    },
   };
 
   const iconVariants = {
@@ -64,9 +72,9 @@ const Education = () => {
       transition: {
         type: "spring",
         stiffness: 200,
-        damping: 20
-      }
-    }
+        damping: 20,
+      },
+    },
   };
 
   const expandVariants = {
@@ -78,11 +86,11 @@ const Education = () => {
         height: {
           type: "spring",
           stiffness: 100,
-          damping: 20
+          damping: 20,
         },
-        opacity: { duration: 0.2 }
-      }
-    }
+        opacity: { duration: 0.2 },
+      },
+    },
   };
 
   return (
@@ -91,10 +99,10 @@ const Education = () => {
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
-          transition={{ 
+          transition={{
             type: "spring",
             stiffness: 100,
-            damping: 20
+            damping: 20,
           }}
           className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500"
         >
@@ -113,13 +121,13 @@ const Education = () => {
               variants={timelineVariants}
               className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent origin-top"
             />
-            
+
             <div className="relative pl-16">
               <motion.div
                 variants={cardVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.02,
-                  transition: { type: "spring", stiffness: 400 }
+                  transition: { type: "spring", stiffness: 400 },
                 }}
                 className="bg-gray-900 rounded-xl p-6 shadow-xl mb-8 border border-gray-700 hover:border-purple-500 transition-all duration-300"
               >
@@ -129,56 +137,55 @@ const Education = () => {
                 >
                   <GraduationCap className="w-8 h-8 text-purple-500" />
                 </motion.div>
-                
-                <motion.div 
-                  className="space-y-4 pl-10"
-                  initial={false}
-                >
+
+                <motion.div className="space-y-4 pl-10" initial={false}>
                   <motion.h3
                     className="text-xl font-bold text-white"
                     whileHover={{ x: 10 }}
                   >
                     Bachelor of Technology in Computer Science Engineering
                   </motion.h3>
-                  
-                  <motion.div
-                    className="flex items-center text-gray-400"
-                  >
+
+                  <motion.div className="flex items-center text-gray-400">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>2020 - 2024</span>
                   </motion.div>
-                  
-                  <motion.div
-                    className="flex items-center text-gray-400"
-                  >
+
+                  <motion.div className="flex items-center text-gray-400">
                     <Award className="w-4 h-4 mr-2" />
-                    <span>Specialization in Artificial Intelligence and Machine Learning</span>
+                    <span>
+                      Specialization in Artificial Intelligence and Machine
+                      Learning
+                    </span>
                   </motion.div>
-                  
-                  <motion.div
-                    className="bg-gray-800/50 rounded-lg p-4 border border-gray-700"
-                  >
+
+                  <motion.div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
                     <div className="flex items-start">
                       <Cpu className="w-5 h-5 text-purple-500 mt-1 mr-3" />
                       <div>
-                        <h4 className="text-white font-medium mb-2">Key Focus Areas</h4>
+                        <h4 className="text-white font-medium mb-2">
+                          Key Focus Areas
+                        </h4>
                         <motion.ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {[
-                            'Machine Learning Algorithms',
-                            'Deep Learning & Neural Networks',
-                            'Computer Vision',
-                            'Natural Language Processing',
-                            'Data Science & Analytics'
+                            "Full-Stack Web Development",
+                            "AI integrated Web Applications",
+                            "Machine Learning Algorithms",
+                            "Deep Learning & Neural Networks",
+                            "Computer Vision",
+                            "Natural Language Processing",
+                            "Large Language Models",
+                            "Data Science & Analytics",
                           ].map((item, index) => (
                             <motion.li
                               key={index}
                               initial={{ opacity: 0, x: -20 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: index * 0.1 }}
-                              whileHover={{ 
+                              whileHover={{
                                 x: 10,
-                                color: '#A855F7',
-                                transition: { type: "spring", stiffness: 300 }
+                                color: "#A855F7",
+                                transition: { type: "spring", stiffness: 300 },
                               }}
                               className="flex items-center text-gray-400 space-x-2"
                             >
@@ -197,7 +204,9 @@ const Education = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <span>{isExpanded ? 'Show Less' : 'Show Achievements'}</span>
+                    <span>
+                      {isExpanded ? "Show Less" : "Show Achievements"}
+                    </span>
                     <motion.div
                       animate={{ rotate: isExpanded ? 180 : 0 }}
                       transition={{ duration: 0.3 }}

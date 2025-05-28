@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Code } from 'lucide-react';
 
@@ -34,7 +34,7 @@ const Navbar = () => {
           </motion.div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
-              {['Home', 'Skills', 'Education', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'Education', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}

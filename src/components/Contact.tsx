@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { Mail, Phone, Send } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-import { Phone, Mail, Send } from 'lucide-react';
 
 const Contact = () => {
   const [ref, inView] = useInView({

@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import photo from '../images/Photo.jpg'
+import { motion } from "framer-motion";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import photo from "../images/Photo.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gray-900 pt-16">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-gray-900 pt-16"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -13,18 +16,19 @@ const Hero = () => {
           className="md:w-1/2"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Hi, I'm <span className="text-purple-500">KANAPARTHI RAJASHEKAR</span>
+            Hi, I'm{" "}
+            <span className="text-purple-500">KANAPARTHI RAJASHEKAR</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-400 mb-6">
-            Full Stack Developer & UI/UX Designer
+            Full Stack Developer | Artificial Intelligence and Machine Learning Engineer
           </h2>
           <p className="text-gray-300 mb-8 max-w-lg">
-            I craft beautiful, responsive, and user-friendly web applications using modern technologies.
-            Let's build something amazing together.
+            I build scalable web applications and integrate AI features using
+            modern technologies. Let's create innovative solutions together.
           </p>
           <div className="flex space-x-4">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Rajashekar7272"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -34,7 +38,7 @@ const Hero = () => {
               <Github className="h-6 w-6 text-white" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kanaparthi-rajashekar-1273b6239"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -74,7 +78,7 @@ const Hero = () => {
           <img
             src={photo}
             alt="Profile"
-            className="rounded-full w-64 h-64 object-cover mx-auto shadow-2xl"
+            className="rounded-full w-64 h-64 object-fill mx-auto shadow-2xl"
           />
         </motion.div>
       </div>
