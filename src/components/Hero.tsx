@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
             Full Stack Developer | AI Integrated Web Development | Artificial
-            Intelligence and Machine Learning Engineer
+            Intelligence and Machine Learning Graduate
           </motion.h2>
 
           <p className="text-gray-300 mb-8 max-w-lg text-lg">
