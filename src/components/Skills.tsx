@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import {
   AtSign,
+  BirdIcon,
   BookOpen,
   Boxes,
   Brain,
@@ -8,7 +9,6 @@ import {
   Database,
   FileCode2,
   FileJson,
-  FlaskConical,
   Frame,
   GitBranch,
   Layers,
@@ -23,7 +23,7 @@ import {
   Target,
   Terminal,
   Users,
-  Zap,
+  Zap
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
@@ -109,12 +109,12 @@ const skills = [
     icon: Boxes,
     color: "text-emerald-500",
   },
-  {
-    name: "Flask",
-    category: "Back-End Development & APIs",
-    icon: FlaskConical,
-    color: "text-gray-500",
-  }, // Use Terminal if FlaskConical unavailable
+  // {
+  //   name: "Flask",
+  //   category: "Back-End Development & APIs",
+  //   icon: FlaskConical,
+  //   color: "text-gray-500",
+  // }, // Use Terminal if FlaskConical unavailable
   {
     name: "RESTful API design",
     category: "Back-End Development & APIs",
@@ -195,6 +195,12 @@ const skills = [
     name: "Large Language Models (LLMs)",
     category: "Artificial Intelligence & Machine Learning",
     icon: BookOpen,
+    color: "text-green-500",
+  },
+  {
+    name: "Langchain",
+    category: "Artificial Intelligence & Machine Learning",
+    icon: BirdIcon,
     color: "text-green-500",
   },
   {
@@ -339,7 +345,7 @@ const Skills = () => {
                 >
                   {category}
                 </motion.h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 cursor-pointer">
                   {categorySkills.map((skill, index) => {
                     const Icon = skill.icon;
                     return (

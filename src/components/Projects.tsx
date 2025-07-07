@@ -1,16 +1,14 @@
 import { motion } from "framer-motion";
 import {
-  Bot,
+  Dumbbell,
   ExternalLink,
   Film,
-  FilmIcon,
   Gamepad2,
   Github,
   MessageSquare,
   MonitorPlayIcon,
-  MonitorSpeaker,
-  Search,
-  ShoppingBag,
+  NewspaperIcon,
+  ShoppingBag
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
@@ -19,7 +17,66 @@ const projects = [
 
   // New projects
   {
-    title: "Social Connection – Scalable Social Media Web Application",
+    title: "AI Fitness and Nutrition Plan Generator Web Application",
+    description:
+      "Using Gemini-AI Developed a full-stack web application generating personalized workout and nutrition plans for 1,000+ users based on inputs like age, height, weight, and fitness goals, achieving a 90% user satisfaction rate.",
+    icon: Dumbbell,
+    live: "https://ai-fitness-seven.vercel.app/",
+    github: "https://github.com/Rajashekar7272/Ai-Fitness",
+    tech: [
+      "Gemini-API",
+      "Next.Js",
+      "React.js",
+      "Tailwind CSS",
+      "Clerk authuenticaton",
+      "Convex Database",
+      "Vercel",
+      "Git",
+    ],
+    color: "from-blue-500 to-indigo-600",
+  },
+  {
+    title: "AI-News-ChatBot",
+    description:
+      "Developed a conversational chatbot using Python, transformers, and Google Gemini API to summarize real-time news articles from 50+ RSS feeds with natural language processing (NLP).",
+    icon: NewspaperIcon,
+    live: "https://news-ai-nine-psi.vercel.app/",
+    github: "https://github.com/Rajashekar7272/AI-News-ChatBot",
+    tech: [
+      "Gemini-API",
+      "Gemini-Embeddigs",
+      "LangChain",
+      "Datastax(Vector Database)",
+      "Next.Js",
+      "React.js",
+      "Tailwind CSS",
+      "Vercel",
+      "Git",
+    ],
+    color: "from-green-500 to-teal-600",
+  },
+  {
+    title: "Disney-Style-Clone AI-Movie Recommendation Engine",
+    description:
+      "AI-powered movie recommendation engine using content-based filtering and NLP for personalized suggestions.",
+    icon: MonitorPlayIcon,
+    live: "https://stream-ai-psi.vercel.app/",
+    github: "https://github.com/Rajashekar7272/AI-Disney-Clone",
+    tech: [
+      "Google Gemini API",
+      "TMDB Movie Database",
+      "Next.js",
+      "React.JS",
+      "Tailwind CSS",
+      "ShadCn",
+      "Vercel",
+      "Git",
+    ],
+    color: "from-red-500 to-yellow-500",
+  },
+  {
+    title:
+      "Social Connection – Scalable Social Media Web Application|MERN Stack",
     description:
       "A scalable social media platform built with MERN stack, featuring secure authentication, real-time interactions, and a modular frontend.",
     icon: MessageSquare,
@@ -39,48 +96,6 @@ const projects = [
       "Docker",
     ],
     color: "from-blue-500 to-indigo-600",
-  },
-  {
-    title: "Disney-Style-Clone AI-Movie Recommendation Engine",
-    description:
-      "AI-powered movie recommendation engine using content-based filtering and NLP for personalized suggestions.",
-    icon: MonitorPlayIcon,
-    live: "https://stream-ai-psi.vercel.app/",
-    github: "https://github.com/Rajashekar7272/AI-Disney-Clone",
-    tech: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Scikit-learn",
-      "TensorFlow",
-      "Google Gemini API",
-      "Next.js",
-      "Flask",
-      "Vercel",
-      "Git",
-    ],
-    color: "from-red-500 to-yellow-500",
-  },
-  {
-    title: "AI-Powered News Chatbot",
-    description:
-      "Conversational AI chatbot for real-time news summarization and sentiment analysis with high accuracy.",
-    icon: Bot,
-    live: "https://news-ai-nine-psi.vercel.app/",
-    github: "https://github.com/Rajashekar7272/AI-News-ChatBot",
-    tech: [
-      "Python",
-      "Transformers",
-      "Google Gemini API",
-      "NLTK",
-      "spaCy",
-      "Flask",
-      "MongoDB",
-      "Docker",
-      "Git",
-      "Postman",
-    ],
-    color: "from-green-500 to-teal-600",
   },
   {
     title: "Men's Wear E-commerce",
@@ -131,7 +146,10 @@ const Projects = () => {
         >
           Technical Experience Featured Projects
         </motion.h2>
-        <div ref={ref} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 hover:cursor-pointer">
+        <div
+          ref={ref}
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 hover:cursor-pointer"
+        >
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (

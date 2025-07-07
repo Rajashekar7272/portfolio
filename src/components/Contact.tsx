@@ -68,7 +68,7 @@ const Contact = () => {
                     href="tel:+919014629382"
                     className="text-white hover:text-purple-400 transition-colors"
                   >
-                    +91 901 462 9382
+                    +91 9014629382
                   </a>
                 </div>
               </motion.div>

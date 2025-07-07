@@ -19,10 +19,16 @@ const Hero = () => {
             Hi, I'm{" "}
             <span className="text-purple-500">KANAPARTHI RAJASHEKAR</span>
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-400 mb-6">
-            Full Stack Developer | Artificial Intelligence and Machine Learning Engineer
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-lg">
+          <motion.h2
+            className="text-xl md:text-xl font-bold bg-gradient-to-r from-white via-red-500 to-green-600 bg-[length:200%] bg-clip-text text-transparent mb-6"
+            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            Full Stack Developer | AI Integrated Web Development | Artificial
+            Intelligence and Machine Learning Engineer
+          </motion.h2>
+
+          <p className="text-gray-300 mb-8 max-w-lg text-lg">
             I build scalable web applications and integrate AI features using
             modern technologies. Let's create innovative solutions together.
           </p>
@@ -78,7 +84,7 @@ const Hero = () => {
           <img
             src={photo}
             alt="Profile"
-            className="rounded-full w-64 h-64 object-fill mx-auto shadow-2xl"
+            className="rounded-full w-64 h-64 object-fill mx-auto shadow-2xl hover:shadow-xl hover:shadow-purple-500 cursor-pointer"
           />
         </motion.div>
       </div>
